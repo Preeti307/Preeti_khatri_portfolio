@@ -79,33 +79,33 @@ export function TechnologyMap() {
     }, []);
 
     return (
-        <section id="skills" className="py-24 md:py-32 px-6 md:px-24 bg-ink flex flex-col items-center justify-center text-center">
+        <section id="skills" className="py-28 md:py-36 px-6 md:px-24 bg-ink flex flex-col items-center justify-center text-center">
             <div className="w-full max-w-6xl">
-                <div className="text-accent font-mono text-xs mb-4 tracking-widest uppercase">// 02_SKILLS_CONSTELLATION</div>
+                <div className="text-accent font-mono text-[9px] md:text-[10px] mb-6 tracking-[0.3em] uppercase">// 02_SKILLS_CONSTELLATION</div>
 
                 <GravityHeading
                     as="h2"
                     text="Technology Map"
-                    className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter mb-4 md:mb-6"
+                    className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight mb-6 md:mb-8"
                     spanClassName="text-gradient"
                 />
 
-                <p className="text-white/40 max-w-lg mx-auto mb-12 md:mb-24 text-sm md:text-base">
+                <p className="text-white/50 max-w-2xl mx-auto mb-16 md:mb-28 text-base md:text-lg leading-[1.6]">
                     Every tool in my stack, and how they connect. Hover any node to explore the relationships.
                 </p>
 
-                <div className="relative glass-card p-4 md:p-8 overflow-hidden">
+                <div className="relative glass-card p-6 md:p-10 overflow-hidden">
                     <svg ref={svgRef} viewBox="0 0 800 500" className="w-full h-auto max-w-4xl mx-auto" />
 
-                    <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 flex gap-4 md:gap-6">
+                    <div className="absolute bottom-5 md:bottom-8 left-5 md:left-8 flex gap-5 md:gap-7">
                         {[
                             { color: "bg-accent", label: "Data" },
                             { color: "bg-neon-purple", label: "Web" },
                             { color: "bg-neon-pink", label: "Core" },
                         ].map((item) => (
-                            <div key={item.label} className="flex items-center gap-2">
-                                <div className={`w-2 h-2 rounded-full ${item.color}`} />
-                                <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/40 font-bold">{item.label}</span>
+                            <div key={item.label} className="flex items-center gap-2.5">
+                                <div className={`w-2.5 h-2.5 rounded-full ${item.color}`} />
+                                <span className="text-[8px] md:text-[9px] uppercase tracking-wider text-white/40 font-semibold">{item.label}</span>
                             </div>
                         ))}
                     </div>
